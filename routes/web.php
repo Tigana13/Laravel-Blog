@@ -373,3 +373,12 @@ Route::get('/user/{id}/post', function($id){
         return User::find($id);
 
 });
+
+Route::get('/post/{id}/user', function ($id){
+
+    return Post::find($id)->user->name;
+
+});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -36,4 +36,22 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+
+    //defining function to use 'username' field in authentication
+    public function username()
+    {
+        return 'username';
+    }
+
+    //defining the guard function
+    public function guard()
+    {
+
+        return Auth::guard('username-guard');
+
+
+    }
+
+
 }

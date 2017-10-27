@@ -21,5 +21,13 @@ class Post extends Model
 
     //
 
+    //Creating Inverse of ONE TO ONE relationships in Model class
+
+    public function user(){
+
+        return $this->belongsTo('App\User');
+
+    }
+
 
 }
